@@ -4,7 +4,8 @@ parent.forEach((child) => {
         child.remove();
 });
 
-document.querySelector(".btn").addEventListener("click", (event) => {
+button = document.querySelector(".btn");
+button.addEventListener("click", (event) => {
 
     const parent = document.querySelector('div');
 
@@ -21,14 +22,37 @@ document.querySelector(".btn").addEventListener("click", (event) => {
     const toss = document.createElement('h1');
     toss.textContent = x===0? 'Heads!': 'Tails!';
     if(toss.textContent === 'Heads!') {
-        children[0].style.backgroundColor = 'rgb(198, 185, 185)';
-        children[0].style.color = 'rgb(53, 52, 49)';
+        children[0].className = 'btn-heads';
 
     }
-
     else {
-        children[0].style.backgroundColor = 'rgb(185, 198, 185)';
-        children[0].style.color = 'rgb(51, 53, 50)';
+        children[0].className = 'btn-tails';
     }
     parent.appendChild(toss);
+});
+
+button.addEventListener('mouseover', () => {
+    const nodes = document.querySelector('div').childNodes;
+    const text = nodes[1].textContent;
+    if(text === 'Heads!') {
+        nodes[0].className = 'btn-hover-heads';
+        console.log(nodes[0]);
+    }
+    else if(text === 'Tails!') {
+        nodes[0].className = 'btn-hover-tails';
+        console.log(nodes[0]);
+    }
+});
+
+button.addEventListener('mouseout', () => {
+    const nodes = document.querySelector('div').childNodes;
+    const text = nodes[1].textContent;
+    if(text === 'Heads!') {
+        nodes[0].className = 'btn-heads';
+        console.log(nodes[0]);
+    }
+    else if(text === 'Tails!') {
+        nodes[0].className = 'btn-tails';
+        console.log(nodes[0]);
+    }
 });

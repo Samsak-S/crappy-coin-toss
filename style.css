@@ -28,10 +28,25 @@ button {
     box-shadow: 0 0 25px rgba(30, 30, 29, 0.5);
 }
 button:hover { 
-    background-color: rgb(197, 158, 139);
+    cursor: pointer;
     background-color: rgb(218, 226, 207);
 }
 button:active {
-    background-color: rgb(143, 208, 164);
     background-color: rgb(207, 204, 170);
+}
+.btn-heads {
+    background-color : rgb(182, 169, 169);
+    color : rgb(53, 52, 49);
+}
+.btn-hover-heads {
+    background-color : rgb(165, 176, 165);
+    color : rgb(234, 180, 16);
+}
+.btn-tails {
+    background-color : rgb(165, 176, 165);
+    color : rgb(51, 53, 50);
+}
+.btn-hover-tails {
+    background-color: rgb(182, 190, 182);
+    color : rgb(24, 225, 162);
 }
