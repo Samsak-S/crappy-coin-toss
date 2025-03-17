@@ -2,12 +2,14 @@ const parent = document.querySelector('div').childNodes;
 parent.forEach((child) => {
     if(child.nodeName === "#text")
         child.remove();
-    console.log(child);
 });
-console.log(parent);
+
 document.querySelector(".btn").addEventListener("click", (event) => {
 
     const parent = document.querySelector('div');
+
+    const children = parent.childNodes;
+
 
     parent.lastChild.remove();
     event.preventDefault();
@@ -17,6 +19,16 @@ document.querySelector(".btn").addEventListener("click", (event) => {
     }
     const x = Math.round(random/10);
     const toss = document.createElement('h1');
-    toss.textContent = x===0? 'Heads!': 'Tails';
+    toss.textContent = x===0? 'Heads!': 'Tails!';
+    if(toss.textContent === 'Heads!') {
+        children[0].style.backgroundColor = 'rgb(198, 185, 185)';
+        children[0].style.color = 'rgb(53, 52, 49)';
+
+    }
+
+    else {
+        children[0].style.backgroundColor = 'rgb(185, 198, 185)';
+        children[0].style.color = 'rgb(51, 53, 50)';
+    }
     parent.appendChild(toss);
 });

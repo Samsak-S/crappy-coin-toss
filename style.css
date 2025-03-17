@@ -4,9 +4,11 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    color: rgb(2, 64, 32);
+    font-size: large;
 }
 div {
-    background-color: rgb(102, 104, 7);
+    background-color: rgb(171, 185, 138);
     height: 50vh;
     width: 50vw;
     display: flex;
@@ -17,20 +19,19 @@ div {
     border-radius: 0.5rem;
 }
 button {
-    color: rgb(214, 76, 26);
+    color: rgb(222, 137, 80);
     height: 120px;
     width: 120px;
     padding: 20px;
     border-radius: 50%;
     border: none;
+    box-shadow: 0 0 25px rgba(30, 30, 29, 0.5);
 }
 button:hover { 
-    background-color: rgb(221, 132, 76);
+    background-color: rgb(197, 158, 139);
+    background-color: rgb(218, 226, 207);
 }
 button:active {
-    background-color: rgb(221, 207, 76);
-}
-h1 {
-    color: rgb(2, 64, 32);
-    font-size: large;
+    background-color: rgb(143, 208, 164);
+    background-color: rgb(207, 204, 170);
 }
