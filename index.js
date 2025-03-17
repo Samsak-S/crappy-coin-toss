@@ -42,6 +42,9 @@ button.addEventListener('mouseover', () => {
         nodes[0].className = 'btn-hover-tails';
         console.log(nodes[0]);
     }
+    else {
+        nodes[0].className = 'btn-hover';
+    }
 });
 
 button.addEventListener('mouseout', () => {
@@ -54,5 +57,8 @@ button.addEventListener('mouseout', () => {
     else if(text === 'Tails!') {
         nodes[0].className = 'btn-tails';
         console.log(nodes[0]);
+    }
+    else {
+        nodes[0].className = 'btn';
     }
 });
