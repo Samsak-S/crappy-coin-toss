@@ -14,7 +14,9 @@ button.addEventListener("click", (event) => {
 
     parent.lastChild.remove();
     event.preventDefault();
-    const x = Math.round(Math.random);
+    let x = Math.random();
+    x = Math.round(x);
+
     const toss = document.createElement('h1');
     toss.textContent = x===0? 'Heads!': 'Tails!';
     if(toss.textContent === 'Heads!') {
